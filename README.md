@@ -1,8 +1,12 @@
 # Deep-Slime: semantic segmentation for biofilms (forked from  PyTorch-UNet)
 
+**Input**
+
 [![xscode](https://img.shields.io/badge/Available%20on-xs%3Acode-blue?style=?style=plastic&logo=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////////VXz1bAAAAAJ0Uk5T/wDltzBKAAAAlUlEQVR42uzXSwqAMAwE0Mn9L+3Ggtgkk35QwcnSJo9S+yGwM9DCooCbgn4YrJ4CIPUcQF7/XSBbx2TEz4sAZ2q1RAECBAiYBlCtvwN+KiYAlG7UDGj59MViT9hOwEqAhYCtAsUZvL6I6W8c2wcbd+LIWSCHSTeSAAECngN4xxIDSK9f4B9t377Wd7H5Nt7/Xz8eAgwAvesLRjYYPuUAAAAASUVORK5CYII=)](https://xscode.com/milesial/Pytorch-UNet)
 
 ![input image from test dataset](resources/example_in.png)
+
+**Output**
 
 ![output image](resources/example_out.png)
 
@@ -10,6 +14,24 @@
 Forked from implementation of the [U-Net](https://arxiv.org/abs/1505.04597) in PyTorch .
 
 This model was trained from scratch with aprox. 18000 images (no data augmentation) and scored a [dice coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient) of 0.97 on over 2000 test images. This score could be improved with more training, data augmentation, fine tuning, playing with CRF post-processing, and applying more weights on the edges of the masks.
+
+## Set Up
+
+Follow these steps to get started:
+
+1. Install this repository from source:
+
+   `git clone https://github.com/cnetsch/deep-slime.git`
+
+   `cd deep-slime`
+
+2. Install requirements:
+
+   `pip install -r requirements.txt`
+
+3. If you are not training a custom model, copy a pretrained model to `models/` (the default model is named `models/best.pth`, name accordingly unless passing a different model name to`predict.py` explicitly).
+
+4. You can now run the code from the command line.
 
 ## Usage
 **Note : Use Python 3.6 or newer**
